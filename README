@@ -1,0 +1,10 @@
+This project aims to start using MongoDB and Couchbase on two files.
+
+After inserting the data into the Databases with :
+Couchbase : create the data bucket and execute :
+/opt/couchbase/bin/cbtransfer (file name) http://127.0.0.1:8091 -B (data bucket) -u (user) -p (password)
+
+MongoDB :
+mongoimport -d mydb -c (Collection name) --type csv --headerline --file (file name)
+
+We can now lunch the script perf.py to have the performance results.
